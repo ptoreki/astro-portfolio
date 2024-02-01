@@ -1,8 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-const skills = ["React", "Typescript", "Astro"];
-const projects = ["Avanzar", "Curated Manager", "Kick Archive"];
+const skills = ["React", "Astro", "Typescript", "Contentful", "Firebase"];
+const projects = [
+  "Avanzar",
+  "Curated Manager",
+  "Kick Archive",
+  "Inside Kickboxing",
+];
 const colors = {
   LightPeach: "#ffcc99",
   DarkPeach: "#cc9966",
@@ -19,6 +24,8 @@ const colors = {
   LightWisteria: "#a777a7",
   DarkWisteria: "#5b445b",
 };
+const bio =
+  "I didn't start training or watching martial arts until my early twenties. I then spent a few years in Japan while majoring in Japan- and Japanese. Started watching kickboxing in 2019 and have been a huge fan since and try to keep up with the Japanese scene as much as I can. I am not a fighter, but have dabbled in training and competition.";
 ---
 
 <Layout title="Patrick J. Tøreki">
@@ -30,7 +37,7 @@ const colors = {
     />
     <Card
       title="About"
-      description="A developer with a passion for technology"
+      description={bio}
       cardTitleColor={colors.LightRedFuji}
       cardBodyColor={colors.DarkRedFuji}
     />
