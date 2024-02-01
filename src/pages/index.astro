@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+const skills = ["React", "Typescript", "Astro"];
+const projects = ["Avanzar", "Curated Manager", "Kick Archive"];
+const colors = {
+  LightPeach: "#ffcc99",
+  DarkPeach: "#cc9966",
+
+  LightRedFuji: "#ff6666",
+  DarkRedFuji: "#cc3333",
+
+  LightSeaWeedGreen: "#aaffcc",
+  DarkSeaWeedGreen: "#66cc99",
+
+  LightNihonBlue: "#6699ff",
+  DarkNihonBlue: "#336699",
+
+  LightWisteria: "#a777a7",
+  DarkWisteria: "#5b445b",
+};
+---
+
+<Layout title="Patrick J. Tøreki">
+  <main>
+    <Card
+      headerTitle="Patrick Jindakul Tøreki"
+      cardTitleColor={colors.LightPeach}
+      cardBodyColor={colors.DarkPeach}
+    />
+    <Card
+      title="About"
+      description="A developer with a passion for technology"
+      cardTitleColor={colors.LightRedFuji}
+      cardBodyColor={colors.DarkRedFuji}
+    />
+    <Card
+      title="Skills"
+      items={skills}
+      cardTitleColor={colors.LightSeaWeedGreen}
+      cardBodyColor={colors.DarkSeaWeedGreen}
+    />
+    <Card
+      title="Projects"
+      items={projects}
+      cardTitleColor={colors.LightNihonBlue}
+      cardBodyColor={colors.DarkNihonBlue}
+    />
+    <Card
+      title="Contact"
+      description="ptoreki@gmail.com"
+      cardTitleColor={colors.LightWisteria}
+      cardBodyColor={colors.DarkWisteria}
+    />
+  </main>
+
+  <style></style>
+</Layout>

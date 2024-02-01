@@ -1,0 +1,56 @@
+---
+interface Props {
+  headerTitle?: string;
+  title?: string;
+  description?: string;
+  items?: string[];
+  cardTitleColor: string;
+  cardBodyColor: string;
+}
+const {
+  cardTitleColor,
+  cardBodyColor,
+  headerTitle,
+  title,
+  description,
+  items,
+} = Astro.props;
+const titleStyle = { backgroundColor: cardTitleColor };
+const bodyStyle = { backgroundColor: cardBodyColor };
+---
+
+<section style={{ margin: "50px" }}>
+  {
+    headerTitle && (
+      <>
+        <header style={titleStyle}>
+          <h1>{headerTitle}</h1>
+        </header>
+        <div style={bodyStyle}>Test test test </div>
+      </>
+    )
+  }
+
+  <article>
+    {title && !items && <h2 style={titleStyle}>{title}</h2>}
+    {description && <p style={bodyStyle}>{description}</p>}
+    {
+      items && items.length > 0 && (
+        <>
+          <h2 style={titleStyle}>{title}</h2>
+          <ul style={bodyStyle}>
+            {items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+  </article>
+</section>
+
+<style>
+  * {
+    color: #fff;
+  }
+</style>
